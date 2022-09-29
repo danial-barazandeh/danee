@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: IRANSans;
+  src: url('/fonts/IRANSansWebFaNum.ttf');
+}
+
+@font-face {
+  font-family: Lalezar;
+  src: url('/fonts/LalezarRegular.ttf');
+}
+
+
+
+*{
+  font-family: IRANSans;
+}
+
+
+@keyframes example {
+  0%   {filter: drop-shadow(16px 16px 100px #1EEADA) blur(0px);}
+  100% {filter: drop-shadow(16px 16px 100px #1EEADA) blur(8px);}
+}
+
+
+.img-child-blur > .img{
+  /* @apply hover:blur-sm duration-300 transition-all;  */
+  filter: blur(0px);
+  transition: 0.5s;
+}
+.img-child-blur:hover > .img{
+  animation-name: example;
+  animation-duration: 1s;
+  filter: drop-shadow(16px 16px 100px #1EEADA) blur(8px);
+}
+
+.fontmontserrat{
+  font-family: Lalezar !important;
+}
+
+.fontiransans{
+  font-family: IRANSans !important;
+}
+
+@layer components {
+  .praymary-button {
+    @apply bg-primary text-white px-4 py-2 rounded-md;
+  }
+  .praymary-button-active {
+    @apply bg-primary text-white px-4 py-2 font-bold rounded-md;
+  }
+
+  .post-card{
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+  }
+
+
+  .author-avatar{
+    @apply h-8 w-8 rounded-3xl;
+  }
+  .author-avatar-hover{
+    @apply rounded-md h-16 w-16 cursor-pointer;
+  }
+
+  .primary-button{
+    @apply bg-gradient-to-r from-primary to-secondary rounded-lg mx-2 px-4 py-2;
+  }
+  .primary-button-hover{
+    @apply bg-gradient-to-r from-secondary to-primary rounded-lg mx-2 px-4 py-2;
+  }
+
+  
+.product-image-div{
+    @apply w-[450px] h-64;
+  }
+
+  .iner-html > p {
+    @apply text-tcolor text-justify leading-7;
+  }
+  
+}
+
