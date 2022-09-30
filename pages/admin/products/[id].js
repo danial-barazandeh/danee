@@ -114,12 +114,12 @@ export default function Product() {
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="title" className='w-[15%] font-bold'>عنوان</label>
+                    <label htmlFor="title" className='w-[15%] font-bold'>عنوان</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="title" ref={titleRef} name="title" defaultValue={data.title}></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="title" className='w-[15%] font-bold'>متن</label>
+                    <label htmlFor="title" className='w-[15%] font-bold'>متن</label>
                     <div className='w-[85%] px-4 py-2'>
 
                         <JoditEditor
@@ -132,47 +132,47 @@ export default function Product() {
 
                 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="title" className='w-[15%] font-bold'>ویدئو معرفی</label>
+                    <label htmlFor="title" className='w-[15%] font-bold'>ویدئو معرفی</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="introUrl" ref={introUrlRef} name="introUrl" defaultValue={data.introUrl}></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="image" className='w-[15%] font-bold'>لینک تصویر</label>
+                    <label htmlFor="image" className='w-[15%] font-bold'>لینک تصویر</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="image" ref={imageRef} name="image" defaultValue={data.image.url}></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoTitle" className='w-[15%] font-bold'>عنوان سئو</label>
+                    <label htmlFor="seoTitle" className='w-[15%] font-bold'>عنوان سئو</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="seoTitle" defaultValue={data.seoTitle} ref={seoTitleRef} name="seoTitle"></input>
                 </div>
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoTitle" className='w-[15%] font-bold'>قیمت</label>
+                    <label htmlFor="seoTitle" className='w-[15%] font-bold'>قیمت</label>
                     <input type="text" className='w-[35%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="price" defaultValue={data.price} ref={priceRef} name="seoTitle"></input>
                     <p className="text-tcolor"> هزار تومن </p>
                 </div>
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoTitle" className='w-[15%] font-bold'>قیمت پس از تخفیف</label>
+                    <label htmlFor="seoTitle" className='w-[15%] font-bold'>قیمت پس از تخفیف</label>
                     <input type="text" className='w-[35%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="salePrice" defaultValue={data.salePrice} ref={salePriceRef} name="salePrice"></input>
                     <p className="text-tcolor"> هزار تومن </p>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoTitle" className='w-[15%] font-bold'>ساعت دوره</label>
+                    <label htmlFor="seoTitle" className='w-[15%] font-bold'>ساعت دوره</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="time" defaultValue={data.time} ref={timeRef} name="seoTitle"></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoDescription" className='w-[15%] font-bold'>متن سئو</label>
+                    <label htmlFor="seoDescription" className='w-[15%] font-bold'>متن سئو</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="seoDiscription" defaultValue={data.seoDiscription} ref={seoDiscriptionRef} name="seoDiscription"></input>
                 </div>
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoKeys" className='w-[15%] font-bold'>کلید سئو</label>
+                    <label htmlFor="seoKeys" className='w-[15%] font-bold'>کلید سئو</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="seoKeys" name="seoKeys" ref={seoKeysRef} onKeyDown={(event, value) => {
                         if (event.code === "Enter" || event.code === "NumpadEnter") {
                             handleChips()
@@ -187,14 +187,14 @@ export default function Product() {
                 <div className='flex gap-4'>
                     {
                         chips.map((chip) => {
-                            return (<Chip label={chip} onDelete={() => handleChipDelete(chip)} />);
+                            return (<Chip key={chip} label={chip} onDelete={() => handleChipDelete(chip)} />);
                         })
                     }
                 </div>
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="seoDescription" className='w-[15%] font-bold'>متن سئو</label>
+                    <label htmlFor="seoDescription" className='w-[15%] font-bold'>متن سئو</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="seoDiscription" defaultValue={data.seoDiscription} ref={seoDiscriptionRef} name="seoDiscription"></input>
                 </div>
 

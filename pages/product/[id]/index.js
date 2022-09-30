@@ -106,7 +106,7 @@ const PostsForHome = () => {
 
                 {section.lectures.map((lecture, index) => {
                   return (
-                      <Disclosure id={lecture.id}>
+                      <Disclosure id={lecture.id} key={index}>
                       {({ open }) => (
                         <>
                           <Disclosure.Button className="bg-slate-200 flex my-4 w-full justify-between rounded-lg px-4 py-2 text-left text-sm font-medium ">

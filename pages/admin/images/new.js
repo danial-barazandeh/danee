@@ -11,8 +11,8 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 
 
-export default function newImage() {
 
+export default function NewImage() {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -104,7 +104,7 @@ export default function newImage() {
 }
 
 
-newImage.getLayout = function getLayout(page) {
+NewImage.getLayout = function getLayout(page) {
     return (
         <AdminMenu>{page}</AdminMenu>
     )

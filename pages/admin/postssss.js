@@ -23,7 +23,7 @@ export default function Posts() {
 
         <div className='bg-background rounded-lg shadow-lg p-8 flex flex-col'>
 
-            <table class="table-auto">
+            <table className="table-auto">
 
                 <thead>
                     <tr>
@@ -53,7 +53,7 @@ export default function Posts() {
                 <tbody>
                     {data.data.map((post, index) => {
                         return (
-                            <tr className='border-b-2 border-slate-200' id={index}>
+                            <tr className='border-b-2 border-slate-200' key={index}  id={index}>
                                 <td>{post.title}</td>
                                 <td>{post.content ? post.content.substring(0, 30) + "..." : "ثبت نشده"}</td>
                                 <td>

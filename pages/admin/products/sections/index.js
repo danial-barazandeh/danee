@@ -68,12 +68,12 @@ export default function Sections() {
             <div className='bg-background rounded-lg shadow-lg p-8 flex flex-col gap-4'>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="title" className='w-[15%] font-bold'>عنوان</label>
+                    <label htmlFor="title" className='w-[15%] font-bold'>عنوان</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="title" ref={titleRef} name="title"></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="product" className='w-[15%] font-bold'>محصول</label>
+                    <label htmlFor="product" className='w-[15%] font-bold'>محصول</label>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -114,7 +114,7 @@ export default function Sections() {
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="product" className='w-[15%] font-bold'>سرفصل</label>
+                    <label htmlFor="product" className='w-[15%] font-bold'>سرفصل</label>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -135,7 +135,7 @@ export default function Sections() {
                 {
                     sections.length > 0 ?
                         <div className='flex gap-4 justify-start items-center'>
-                            <label for="title" className='w-[15%] font-bold'>عنوان</label>
+                            <label htmlFor="title" className='w-[15%] font-bold'>عنوان</label>
                             <input type="text" defaultValue={sections.find(object => object.id === section).title} className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="editSectionTitle" ref={editSectionTitleRef} name="editSectionTitle"></input>
                         </div>
                         : <></>
@@ -143,7 +143,7 @@ export default function Sections() {
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="product" className='w-[15%] font-bold'>محصول</label>
+                    <label htmlFor="product" className='w-[15%] font-bold'>محصول</label>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"

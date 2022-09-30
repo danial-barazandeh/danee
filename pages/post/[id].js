@@ -67,7 +67,7 @@ const PostsForHome = () => {
                 <div className='flex gap-4'>
                     {
                         data.seoKeys.map((chip) => {
-                            return (<Chip label={chip} />);
+                            return (<Chip label={chip} key={chip}/>);
                         })
                     }
                 </div>

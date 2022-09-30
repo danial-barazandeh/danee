@@ -95,18 +95,18 @@ export default function Lectures() {
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="title" className='w-[15%] font-bold'>عنوان</label>
+                    <label htmlFor="title" className='w-[15%] font-bold'>عنوان</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="title" ref={titleRef} name="title"></input>
                 </div>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="video" className='w-[15%] font-bold'>ویدئو</label>
+                    <label htmlFor="video" className='w-[15%] font-bold'>ویدئو</label>
                     <input type="text" className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="video" ref={videoRef} name="video"></input>
                 </div>
 
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="content" className='w-[15%] font-bold'>متن</label>
+                    <label htmlFor="content" className='w-[15%] font-bold'>متن</label>
                     <div className='w-[85%] px-4 py-2'>
 
                         <JoditEditor
@@ -156,7 +156,7 @@ export default function Lectures() {
             <div className='bg-background rounded-lg shadow-lg p-8 flex flex-col gap-4 mt-8'>
 
                 <div className='flex gap-4 justify-start items-center'>
-                    <label for="product" className='w-[15%] font-bold'>درس</label>
+                    <label htmlFor="product" className='w-[15%] font-bold'>درس</label>
                     <Select
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
@@ -179,7 +179,7 @@ export default function Lectures() {
                 {
                     lectures.length > 0 ?
                         <div className='flex gap-4 justify-start items-center'>
-                            <label for="title" className='w-[15%] font-bold'>عنوان</label>
+                            <label htmlFor="title" className='w-[15%] font-bold'>عنوان</label>
                             <input type="text" defaultValue={lectures.find(object => object.id === lecture).title} className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="editLectureTitleRef" ref={editLectureTitleRef} name="editLectureTitleRef"></input>
                         </div>
                         : <></>
@@ -189,7 +189,7 @@ export default function Lectures() {
                 {
                     lectures.length > 0 ?
                         <div className='flex gap-4 justify-start items-center'>
-                            <label for="title" className='w-[15%] font-bold'>ویدئو</label>
+                            <label htmlFor="title" className='w-[15%] font-bold'>ویدئو</label>
                             <input type="text" defaultValue={lectures.find(object => object.id === lecture).url} className='w-[85%] px-4 py-2 border-slate-400 focus:border-sky-500 outline-none border-2 rounded-lg' id="editLectureVideoRef" ref={editLectureVideoRef} name="editLectureVideoRef"></input>
                         </div>
                         : <></>
@@ -220,7 +220,7 @@ export default function Lectures() {
                 {
                     lectures.length > 0 ?
                         <div className='flex gap-4 justify-start items-center'>
-                            <label for="editContent" className='w-[15%] font-bold'>متن</label>
+                            <label htmlFor="editContent" className='w-[15%] font-bold'>متن</label>
                             <div className='w-[85%] px-4 py-2'>
                                 <JoditEditor
                                     name="editContent"
