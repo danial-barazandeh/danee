@@ -3,7 +3,7 @@ import PostsForHome from '../components/PostsForHome'
 import ProductsForHome from '../components/ProductsForHome'
 import Image from 'next/image'
 import GradiantFeatures from '../components/GradiantFeatures'
-import { FaHeadphonesAlt,FaMoneyBillAlt,FaHeart, FaClipboardCheck,FaRegArrowAltCircleLeft} from 'react-icons/fa';
+import { FaHeadphonesAlt, FaMoneyBillAlt, FaHeart, FaClipboardCheck, FaRegArrowAltCircleLeft } from 'react-icons/fa';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Nav from '../components/Nav'
 import Layout from '../components/Layout'
@@ -12,80 +12,81 @@ import Lottie from "lottie-react";
 import freelancer from "../public/lottie/freelancer.json";
 // import 'tw-elements';
 
+
 export default function Home() {
   return (
-    <div>
-      
-      <div className='grid col-span-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 justify-center items-center '>
-        <div className='mx-8 relative w-fit 2xl:w-[65%] flex justify-center items-center group img-child-blur'>
-        <div className='static w-[100%] h-[50%] group img '>
-            <Lottie animationData={freelancer} loop={true}/>
-            {/* hover:blur-lg hover:saturate-50 transition-all duration-300 ease-linear */}
+      <div>
+
+        <div className='grid col-span-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 justify-center items-center '>
+          <div className='mx-8 relative w-fit 2xl:w-[65%] flex justify-center items-center group img-child-blur'>
+            <div className='static w-[100%] h-[50%] group img '>
+              <Lottie animationData={freelancer} loop={true} />
+              {/* hover:blur-lg hover:saturate-50 transition-all duration-300 ease-linear */}
+            </div>
+            <div className=' absolute'>
+              <p className=' scale-0 group-hover:scale-100 text-white drop-shadow-2xl font-extrabold text-3xl transition-all duration-300 child-parent-blur'> بهترین جا برای یادگیری </p>
+            </div>
           </div>
-          <div className=' absolute'>
-            <p className=' scale-0 group-hover:scale-100 text-white drop-shadow-2xl font-extrabold text-3xl transition-all duration-300 child-parent-blur'> بهترین جا برای یادگیری </p>
+
+
+          <div className='mx-8'>
+            <h1 className=' text-purple size text-2xl'> دانه </h1>
+            <h3 className=' text-tcolor text-xl'> دانه یک وب سایت آموزشی هست</h3>
+            <h3 className=' text-tcolor text-justify'> دانه جایی هست که میتونی توش یک اجتماع از خفن ترین ها رو پیدا کنی.</h3>
+            <h3 className=' text-tcolor text-justify'>  ما اینجا کمکت میکنیم تا هر چیزایی رو که همیشه دوس داشتی یاد بگیری.</h3>
           </div>
+
         </div>
 
+        <PostsForHome></PostsForHome>
 
-        <div className='mx-8'>
-          <h1 className=' text-purple size text-2xl'> دانه </h1>
-          <h3 className=' text-tcolor text-xl'> دانه یک وب سایت آموزشی هست</h3>
-          <h3 className=' text-tcolor text-justify'> دانه جایی هست که میتونی توش یک اجتماع از خفن ترین ها رو پیدا کنی.</h3>
-          <h3 className=' text-tcolor text-justify'>  ما اینجا کمکت میکنیم تا هر چیزایی رو که همیشه دوس داشتی یاد بگیری.</h3>
-        </div>
+        <br>
+        </br>
 
-      </div>
+        <ScrollContainer className='scroll-container'>
+          <div className='flex gap-4 py-8 '>
 
-      <PostsForHome></PostsForHome>
-
-      <br>
-      </br>
-
-      <ScrollContainer className='scroll-container'>
-        <div className='flex gap-4 py-8 '>
-
-          <div className='bg-primary rounded-full w-36 h-36 shadow-lg shadow-primary text-center text-5xl text-white flex flex-col justify-center items-center shrink-0 m-auto hover:scale-105 transition-all duration-300 hover:cursor-pointer'>
-            <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
+            <div className='bg-primary rounded-full w-36 h-36 shadow-lg shadow-primary text-center text-5xl text-white flex flex-col justify-center items-center shrink-0 m-auto hover:scale-105 transition-all duration-300 hover:cursor-pointer'>
+              <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
               <div className='h-2'></div>
-            <p className=' text-xs'>ویژگی دوره های دانه</p>
+              <p className=' text-xs'>ویژگی دوره های دانه</p>
+            </div>
+
+            <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="تحویل آنی" content="دسترسی کامل به دوره بدون تاخیر">
+              <FaClipboardCheck></FaClipboardCheck>
+            </GradiantFeatures>
+
+            <GradiantFeatures shadowColor="shadow-[#8E78FB]" startColor="from-[#B09EFE]" endColor="to-[#8E78FB]" title="بروزرسانی رایگان" content="دانلود رایگان آخرین بروزرسانی ها">
+              <FaHeart></FaHeart>
+            </GradiantFeatures>
+
+
+            <GradiantFeatures shadowColor="shadow-[#FF9C2A]" startColor="from-[#FDD29E]" endColor="to-[#FF9C2A]" title="مناسب بازار کار" content="آماده سازی برای کسب درآمد">
+              <FaMoneyBillAlt></FaMoneyBillAlt>
+            </GradiantFeatures>
+
+            <GradiantFeatures shadowColor="shadow-[#43C5E9]" startColor="from-[#8AE5FE]" endColor="to-[#43C5E9]" title="پشتیبانی 24 ساعته" content="تماس از طریق تیکت و واتساپ">
+              <FaHeadphonesAlt></FaHeadphonesAlt>
+            </GradiantFeatures>
+
           </div>
+        </ScrollContainer>
 
-          <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="تحویل آنی" content="دسترسی کامل به دوره بدون تاخیر">
-            <FaClipboardCheck></FaClipboardCheck>
-          </GradiantFeatures>
+        <br></br>
 
-          <GradiantFeatures shadowColor="shadow-[#8E78FB]" startColor="from-[#B09EFE]" endColor="to-[#8E78FB]" title="بروزرسانی رایگان" content="دانلود رایگان آخرین بروزرسانی ها">
-            <FaHeart></FaHeart>
-          </GradiantFeatures>
-
-          
-          <GradiantFeatures shadowColor="shadow-[#FF9C2A]" startColor="from-[#FDD29E]" endColor="to-[#FF9C2A]" title="مناسب بازار کار" content="آماده سازی برای کسب درآمد">
-            <FaMoneyBillAlt></FaMoneyBillAlt>
-          </GradiantFeatures>
-
-          <GradiantFeatures shadowColor="shadow-[#43C5E9]" startColor="from-[#8AE5FE]" endColor="to-[#43C5E9]" title="پشتیبانی 24 ساعته" content="تماس از طریق تیکت و واتساپ">
-            <FaHeadphonesAlt></FaHeadphonesAlt>
-          </GradiantFeatures>
-
-        </div>
-      </ScrollContainer>
-
-      <br></br>
-
-      <ProductsForHome></ProductsForHome>
-    </div>
+        <ProductsForHome></ProductsForHome>
+      </div>
   )
 }
 
 Home.getLayout = function getLayout(page) {
   return (
     <>
-    <Layout>
-      <Nav></Nav>
+      <Layout>
+        <Nav></Nav>
         {page}
-    </Layout>
-    <Footer></Footer>
+      </Layout>
+      <Footer></Footer>
     </>
   )
 }

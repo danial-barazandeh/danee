@@ -11,7 +11,6 @@ const PostsForHome = () => {
 
     console.log(data)
     return (
-
         <div className='bg-gradient-to-r from-primary to-secondary '>
 
             <h1 className='mx-8 pt-8 text-white text-2xl'>پست ها</h1>
@@ -19,8 +18,8 @@ const PostsForHome = () => {
                 <div className='flex space-x-4 space-x-reverse py-8'>
                     {data.data.map(post => (
                         post.published === true ? (
-                            <Link href={'/post/'+post.id}>
-                                <div className='relative w-90 mr-6 hover:scale-105 transition-all duration-300 ease-linear flex justify-end cursor-pointer' key={post.id}>
+                            <Link href={'/post/'+post.id}  key={post.id}>
+                                <div className='relative w-90 mr-6 hover:scale-105 transition-all duration-300 ease-linear flex justify-end cursor-pointer'>
                                     <div className='relative post-card w-80 ml-4 mb-4 select-text'>
                                         <img src={post.image.url} alt={post.image.url} className='object-fill w-80 h-[200px] z-0'></img>
                                         <div className='absolute bottom-0 w-[100%] flex justify-center backdrop-blur-sm bg-white/30'>
@@ -43,7 +42,6 @@ const PostsForHome = () => {
                 </div>
             </ScrollContainer>
         </div>
-
     )
 }
 

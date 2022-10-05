@@ -36,7 +36,6 @@ model User {
   updatedAt  DateTime  @updatedAt @map("updated_at")
   posts      Post[]
   products   Product[]
-  otps       Otp[]
 
   @@map("users")
 }
@@ -94,8 +93,7 @@ model Otp {
   id          Int    @id @default(autoincrement())
   password    String
   updatedAt   DateTime  @updatedAt @map("updated_at")
-  userId      Int?
-  user        User?  @relation(fields: [userId], references: [id])
+  phone    String
 }
 
 enum Role {

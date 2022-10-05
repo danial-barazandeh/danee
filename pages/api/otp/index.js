@@ -1,42 +1,18 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
-import util from "../../../components/util"
 
 export default async function handle(req, res) {
     if (req.method === 'GET') {
-    } else if (req.method === "POST") {
+        console.log("otp get api is called");
 
-        
-        const password = req.password
-
-
-
-
-
-        if (payamakResponse.ok === true) {
-            const user = await prisma.user.findFirst(
-                {
-                    where: {
-                        phone: req.phone
-                    }
-                }
-            )
-            if (user) {
-                return user;
-            } else {
-                const response = {
-                    ok: false,
-                    detail : "user is not existing"
-                }
-                return response;
+    } else {
+        const password = Math.floor(Math.random() * 9999).toString();
+        const otp = await prisma.otp.create({
+            data: {
+                password: password,
+                phone: req.body.phone
             }
-        } else {
-            const response = {
-                ok: false,
-                detail : payamakResponse.error
-            }
-            return response;
-        }
-
+        })
+        res.json(otp);
     }
 }
