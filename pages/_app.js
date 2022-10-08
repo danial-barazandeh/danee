@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import '../styles/Footer.moudle.css'
+import '../styles/panel.moudle.css'
 
 function MyApp({
   Component,
