@@ -1,0 +1,15 @@
+.productHolder{
+    @apply w-full h-[75vh] flex flex-col justify-center items-center;
+}
+
+.productHolder img{
+    @apply rounded-md cursor-pointer
+    h-[40%] 2xl:h-[60%]
+    w-[70%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
+    transition-all duration-700
+    m-8;
+}
+
+.productHolder button {
+    @apply bg-secondary hover:bg-primary text-white font-bold py-2 px-4 rounded-md transition-all duration-300;
+}

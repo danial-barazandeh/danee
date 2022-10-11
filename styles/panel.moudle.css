@@ -9,3 +9,8 @@ label{
 }:disabled{
     @apply bg-gray-200;
 }
+
+
+.blue{
+    @apply bg-blue-600;
+}
