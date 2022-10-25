@@ -30,10 +30,10 @@ export default function Home() {
 
 
           <div className='mx-8'>
-            <h1 className=' text-purple size text-2xl'> دانه </h1>
-            <h3 className=' text-tcolor text-xl'> دانه یک وب سایت آموزشی هست</h3>
-            <h3 className=' text-tcolor text-justify'> دانه جایی هست که میتونی توش یک اجتماع از خفن ترین ها رو پیدا کنی.</h3>
-            <h3 className=' text-tcolor text-justify'>  ما اینجا کمکت میکنیم تا هر چیزایی رو که همیشه دوس داشتی یاد بگیری.</h3>
+            <h6 className=' text-purple size text-2xl'> دانه </h6>
+            <h6 className=' text-tcolor text-xl'> دانه یک وب سایت آموزشی هست</h6>
+            <h6 className=' text-tcolor text-2xl text-justify'> دانه جایی هست که میتونی توش یک اجتماع از خفن ترین ها رو پیدا کنی.</h6>
+            <h6 className=' text-tcolor text-2xl text-justify'>  ما اینجا کمکت میکنیم تا هر چیزایی رو که همیشه دوس داشتی یاد بگیری.</h6>
           </div>
 
         </div>
@@ -49,7 +49,7 @@ export default function Home() {
             <div className='bg-primary rounded-full w-36 h-36 shadow-lg shadow-primary text-center text-5xl text-white flex flex-col justify-center items-center shrink-0 m-auto hover:scale-105 transition-all duration-300 hover:cursor-pointer'>
               <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
               <div className='h-2'></div>
-              <p className=' text-xs'>ویژگی دوره های دانه</p>
+              <span className=' text-xs'>ویژگی دوره های دانه</span>
             </div>
 
             <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="تحویل آنی" content="دسترسی کامل به دوره بدون تاخیر">

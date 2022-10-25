@@ -2,34 +2,24 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 export default async function handle(req, res) {
-  if (req.method === 'GET') {
-    const page = req.query.page ?? 0;
-    const limit = req.query.limit ?? 20;
-    const total = await prisma.post.count();
-    const posts = await prisma.post.findMany({
-      take: parseInt(limit ?? 20),
-      skip: parseInt(page ?? 20) * parseInt(limit ?? 20),
-      include: {
-        author: {
-          include: {
-            image: true
-          }
-        },
-        image: true
-      },
-      orderBy: {
-        id: 'asc',
+  if (req.method === 'POST') {
+
+    const product = await prisma.product.findFirst({
+      where: {
+        id: req.body.productId,
       },
     })
-    const totalPage = (total / parseInt(limit)).toFixed();
-    const result = {
-      total: total,
-      data: posts,
-      page: page,
-      total_page: (total / parseInt(limit)).toFixed(),
-      per_page: parseInt(limit ?? 20),
-      next_page: parseInt(totalPage) > (parseInt(page) + 1) ? '/api/posts?limit=' + limit + '&&page=' + (parseInt(page) + 1) : null
-    }
-    res.json(result)
+
+    const payment = await prisma.payment.create({
+      data: {
+        userId: req.body.userId,
+        productId: req.body.productId,
+        priceAfterDiscount: product.salePrice ?? product.price,
+        priceBeforeDiscount: product.price,
+        status:"99",
+      },
+    });
+
+    res.json(payment)
   }
 }

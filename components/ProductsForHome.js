@@ -1,8 +1,5 @@
 import useSWR from 'swr'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import { FaRegClock } from "react-icons/fa";
-import ProductWidget from './ProductWidget';
-import ProductSaleWidget from './ProductSaleWidget';
 import ProductWidgetHome from './ProductWidgetHome';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())

@@ -1,11 +1,12 @@
 .productHolder{
-    @apply w-full h-[75vh] flex flex-col justify-center items-center;
+    @apply w-full flex flex-col justify-center items-center;
 }
 
 .productHolder img{
     @apply rounded-md cursor-pointer
-    h-[40%] 2xl:h-[60%]
-    w-[70%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]
+    h-[30%] sm:h-[40%] md:h-[50%] 2xl:h-[70%]
+    w-[100%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[40%]
+    object-cover
     transition-all duration-700
     m-8;
 }

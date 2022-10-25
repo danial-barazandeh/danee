@@ -15,6 +15,7 @@ import axios from 'axios';
 import { util } from '../../components/util';
 import styles from '../../styles/payment.module.css'
 import { Button } from '@mui/material';
+import { off } from 'process';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -24,21 +25,49 @@ const PostsForHome = () => {
 
   const src = '/api/products/' + router.query.id
 
-  const { data, error } = useSWR(src, fetcher)
+  const { data, error } = useSWR(src, fetcher);
+
   const [user, setUser] = useState({});
 
   useEffect(() => {
     const doooo = async () => {
-      var ses = await getSession();
-      await axios.get(`${util.baseUrl}api/users/${ses.user.id}`,
-        {
-          headers: { 'Content-Type': 'application/json' }
-        }).then(res => {
-          setUser(res.data);
-        })
+      let ses = await getSession();
+      
+      if(typeof ses !== 'undefined'){
+        axios.get(`${util.baseUrl}api/users/${ses.user.id}`,
+          {
+            headers: { 'Content-Type': 'application/json' }
+          }).then(res => {
+            setUser(res.data);
+          })
+      }
+
     }
     doooo();
   }, []);
+
+
+  const createPayment = () => {
+    const res = axios.post(`${util.baseUrl}api/payment`, {
+        userId: user.id,
+        productId: data.id,
+        priceAfterDiscount: data.salePrice ? data.salePrice : data.price,
+        priceBeforeDiscount: data.price,
+    }, { headers: { 'Content-Type': 'application/json' } }
+        // ).then((e) => console.log(e));
+    );
+
+    axios.post(`https://api.idpay.ir/v1.1/payment`, {
+      amount: data.salePrice ? data.salePrice : data.price,
+      name: user.firstName+" "+user.familyName,
+      phone: user.phone,
+      mail: user.email,
+      desc: data.title,
+  }, { headers: { 'Content-Type': 'application/json' , 'X-SANDBOX': 1} }
+  ).then((res) => console.log(res));
+    
+
+}
 
 
   if (error) return <div>failed to load</div>
@@ -63,7 +92,7 @@ const PostsForHome = () => {
             هزار تومن
           </p>
         </div>
-        <button>
+        <button onClick={createPayment}>
           پرداخت هزینه
         </button>
       </div>

@@ -119,6 +119,7 @@ const Nav = () => {
 
     console.log(result)
     setIsLoading(false);
+    setOpen(false);
 
     if (!result.error) {
       // set some auth state

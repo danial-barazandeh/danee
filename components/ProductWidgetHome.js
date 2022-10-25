@@ -20,7 +20,7 @@ const ProductWidgetHome = (props) => {
                         <div className='relative w-90 mb-6 transform-gpu transition-all duration-300 ease-linear grid cursor-pointer rounded-lg overflow-hidden bg-white shadow-lg' key={props.id}>
                             <div className='flex flex-col' >
                                 <img src={src} className="object-fill w-80 h-[200px] z-0" />
-                                <h2 className='text-tcolor p-4 font-semibold'> {props.title} </h2>
+                                <h6 className='text-tcolor p-4 font-semibold text-lg'> {props.title} </h6>
                                 
 
                                 <div className='px-4 flex items-cente'>

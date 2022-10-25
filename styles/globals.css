@@ -96,6 +96,34 @@ a {
   .iner-html > p {
     @apply text-tcolor text-justify leading-7;
   }
+
+
+
+  h1{
+    @apply text-[7em] select-none;
+  }
+  h2{
+    @apply text-[6em] select-none;
+  }
+  h3{
+    @apply text-[5em] select-none;
+  }
+  h4{
+    @apply text-[4em] select-none;
+  }
+  h5{
+    @apply text-[3em] select-none;
+  }
+  h6{
+    @apply text-[2em] select-none;
+  }
+  
+  p{
+    @apply text-[1em] select-none;
+  }
+  
+
+
   
 }
 
