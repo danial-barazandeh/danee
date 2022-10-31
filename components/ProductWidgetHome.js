@@ -3,6 +3,7 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import { FaRegClock } from "react-icons/fa";
 import NumberFormat from 'react-number-format';
 import Link from "next/link";
+import Image from 'next/image'
 
 const {util} = require('./util');
 
@@ -19,7 +20,7 @@ const ProductWidgetHome = (props) => {
         <Link href={productUrl}>
                         <div className='relative w-90 mb-6 transform-gpu transition-all duration-300 ease-linear grid cursor-pointer rounded-lg overflow-hidden bg-white shadow-lg' key={props.id}>
                             <div className='flex flex-col' >
-                                <img src={src} className="object-fill w-80 h-[200px] z-0" />
+                                <Image alt={props.image.title} width={600} height={400} src={src} className="object-fill w-80 h-[200px] z-0" />
                                 <h6 className='text-tcolor p-4 font-semibold text-lg'> {props.title} </h6>
                                 
 

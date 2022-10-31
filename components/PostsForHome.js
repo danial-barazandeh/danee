@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -21,7 +22,7 @@ const PostsForHome = () => {
                             <Link href={'/post/'+post.id}  key={post.id}>
                                 <div className='relative w-90 mr-6 hover:scale-105 transition-all duration-300 ease-linear flex justify-end cursor-pointer'>
                                     <div className='relative post-card w-80 ml-4 mb-4 select-text'>
-                                        <img src={post.image.url} alt={post.image.url} className='object-fill w-80 h-[200px] z-0'></img>
+                                        <Image width={600} height={300} src={post.image.url} alt={post.image.title} className='object-fill w-80 h-[200px] z-0'></Image>
                                         <div className='absolute bottom-0 w-[100%] flex justify-center backdrop-blur-sm bg-white/30'>
                                             <h6 className='text-tcolor m-4 z-1 text-center text-lg' > {post.title} </h6>
                                         </div>
@@ -32,8 +33,8 @@ const PostsForHome = () => {
                                             <h5 className=' text-white text-sm'>{post.author.firstName + " " + post.author.familyName}</h5>
                                         </div>
 
-                                        <img src={post.author.image.url} alt={post.author.firstName + " " + post.author.familyName}
-                                            className="author-avatar group-hover:author-avatar-hover transition-all duration-300 ease-linear"></img>
+                                        <Image width={100} height={100} src={post.author.image.url} alt={post.author.firstName + " " + post.author.familyName}
+                                            className="author-avatar group-hover:author-avatar-hover transition-all duration-300 ease-linear"></Image>
 
                                     </div>
                                 </div>
