@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import { FaRegClock } from "react-icons/fa";
-import NumberFormat from 'react-number-format';
+import { PatternFormat } from 'react-number-format';
 import Link from "next/link";
 import Image from 'next/image'
 
@@ -47,12 +47,12 @@ const ProductWidgetHome = (props) => {
 
                                     <div className='flex justify-end items-center'>
                                         <div className='text-tcolor flex justify-center items-center p-2' dir='ltr'>
-                                                <NumberFormat value={price} displayType={'text'} format="###,###" className=" line-through"/>
+                                                <PatternFormat value={price} displayType={'text'} format="###,###" className=" line-through"/>
                                         </div>
 
                                         <div className='text-white bg-green-600 rounded-3xl mx-2 px-2 flex justify-center items-center' dir='ltr'>
                                                 <p className=' text-xs mx-2'> تومان </p>
-                                                <NumberFormat value={salePrice} displayType={'text'} format="###,###"/>
+                                                <PatternFormat value={salePrice} displayType={'text'} format="###,###"/>
                                         </div>
                                     </div>
 

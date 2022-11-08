@@ -18,18 +18,14 @@ const PanelMenu = ({ children }) => {
 
                 <div>
                     <Link href={util.baseUrl + "panel"}>
-                        <a>
                             <FiUser className={(router.pathname == "/panel" ? "text-blue-500 " : "text-neutral-500 ") + " text-2xl hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"}></FiUser>
-                        </a>
                     </Link>
                 </div>
 
 
                 <div>
                     <Link href={util.baseUrl + "checkout"}>
-                        <a>
                             <FiDollarSign className={(router.pathname == "/checkout" ? "text-blue-500 " : "text-neutral-500 ") + " text-2xl hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"}></FiDollarSign>
-                        </a>
                     </Link>
                 </div>
 

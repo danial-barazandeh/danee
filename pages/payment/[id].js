@@ -32,8 +32,8 @@ const PostsForHome = () => {
   useEffect(() => {
     const doooo = async () => {
       let ses = await getSession();
-      
-      if(typeof ses !== 'undefined'){
+
+      if (typeof ses !== 'undefined') {
         axios.get(`${util.baseUrl}api/users/${ses.user.id}`,
           {
             headers: { 'Content-Type': 'application/json' }
@@ -47,27 +47,18 @@ const PostsForHome = () => {
   }, []);
 
 
-  const createPayment = () => {
-    const res = axios.post(`${util.baseUrl}api/payment`, {
-        userId: user.id,
-        productId: data.id,
-        priceAfterDiscount: data.salePrice ? data.salePrice : data.price,
-        priceBeforeDiscount: data.price,
+  const createPayment  = async () => {
+    const res = await axios.put(`${util.baseUrl}api/payment`, {
+      data: data,
+      user: user,
     }, { headers: { 'Content-Type': 'application/json' } }
-        // ).then((e) => console.log(e));
     );
 
-    axios.post(`https://api.idpay.ir/v1.1/payment`, {
-      amount: data.salePrice ? data.salePrice : data.price,
-      name: user.firstName+" "+user.familyName,
-      phone: user.phone,
-      mail: user.email,
-      desc: data.title,
-  }, { headers: { 'Content-Type': 'application/json' , 'X-SANDBOX': 1} }
-  ).then((res) => console.log(res));
-    
+    window.open(res.data.link);
 
-}
+    console.log(res);
+
+  }
 
 
   if (error) return <div>failed to load</div>

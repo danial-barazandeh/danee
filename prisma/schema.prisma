@@ -109,10 +109,11 @@ model Payment {
   createdAt           DateTime @default(now()) @map("created_at")
   updatedAt           DateTime @updatedAt @map("updated_at")
   status              String?
-  track_id            Int?
+  track_id            String?
   card_no             String?
   hashed_card_no      String?
   date                String?
+  response_id         String?
 }
 
 enum Role {

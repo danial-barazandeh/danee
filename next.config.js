@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  source: "/_next/:path*",
   headers: [
     { key: "Access-Control-Allow-Origin", value: "https://rest.payamak-panel.com/" },
+    { key: "Access-Control-Allow-Origin", value: "https://api.idpay.ir/v1.1/payment" },
   ],
 
   images: {
