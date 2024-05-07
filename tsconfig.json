@@ -23,8 +23,20 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "seed.js"  ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "images": {
+    "formats": ["image/avif", "image/webp", "image/png", "image/jpg"],
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "play4.uk",
+        "port": "",
+        "pathname": "/wp-content/uploads/2021/04/**",
+      },
+    ],
+  },
+  
 }
