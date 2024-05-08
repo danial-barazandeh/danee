@@ -24,16 +24,33 @@ export default function Home() {
               {/* hover:blur-lg hover:saturate-50 transition-all duration-300 ease-linear */}
             </div>
             <div className=' absolute'>
-              <p className=' scale-0 group-hover:scale-100 text-white drop-shadow-2xl font-extrabold text-3xl transition-all duration-300 child-parent-blur'> بهترین جا برای یادگیری </p>
+              <p className=' scale-0 group-hover:scale-100 text-white drop-shadow-2xl font-extrabold text-3xl transition-all duration-300 child-parent-blur'> Lets start learning together </p>
             </div>
           </div>
 
 
           <div className='mx-8'>
-            <h6 className=' text-purple size text-2xl'> دانه </h6>
-            <h6 className=' text-tcolor text-xl'> دانه یک وب سایت آموزشی هست</h6>
-            <h6 className=' text-tcolor text-2xl text-justify'> دانه جایی هست که میتونی توش یک اجتماع از خفن ترین ها رو پیدا کنی.</h6>
-            <h6 className=' text-tcolor text-2xl text-justify'>  ما اینجا کمکت میکنیم تا هر چیزایی رو که همیشه دوس داشتی یاد بگیری.</h6>
+            <h6 className=' text-purple size text-3xl font-extrabold'> Daneh </h6>
+
+            <div className='flex justify-start items-center'> 
+              <h6 className=' text-tcolor text-xl'> Daneh helps you to </h6>
+              <h6 className=' text-tcolor text-2xl font-extrabold'>&nbsp;learn&nbsp;</h6>
+              <h6 className=' text-tcolor text-xl'> hard skills</h6>
+              <h6 className=' text-tcolor text-2xl font-extrabold'>&nbsp;easily</h6>
+              <h6 className=' text-tcolor text-xl text-justify'>.</h6>
+            </div>
+
+            <div className='flex justify-start items-center'> 
+              <h6 className=' text-tcolor text-xl text-justify'> You could be part of our</h6>
+              <h6 className=' text-tcolor text-2xl font-extrabold'>&nbsp;community&nbsp;</h6>
+              <h6 className=' text-tcolor text-xl text-justify'> now!</h6>
+            </div>
+
+            <div className='flex justify-start items-center'>
+              <h6 className=' text-tcolor text-xl text-justify'> lets do it </h6>
+              <h6 className=' text-tcolor text-2xl font-extrabold'>&nbsp;together</h6>
+              <h6 className=' text-tcolor text-xl text-justify'>.</h6>
+            </div>
           </div>
 
         </div>
@@ -49,7 +66,9 @@ export default function Home() {
             <div className='bg-primary rounded-full w-36 h-36 shadow-lg shadow-primary text-center text-5xl text-white flex flex-col justify-center items-center shrink-0 m-auto hover:scale-105 transition-all duration-300 hover:cursor-pointer'>
               <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
               <div className='h-2'></div>
-              <span className=' text-xs'>ویژگی دوره های دانه</span>
+              <span className=' text-xs'>
+                What makes us special
+              </span>
             </div>
 
             <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="تحویل آنی" content="دسترسی کامل به دوره بدون تاخیر">

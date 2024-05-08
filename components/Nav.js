@@ -153,23 +153,30 @@ const Nav = () => {
   return (
       <nav className="bg-slate-100">
         <ul className="flex items-center py-4">
+          
           <li className={router.pathname == "/" ? "text-tcolor mx-8 font-bold" : "text-tcolor-200 mx-8"}>
-            <Link href={util.baseUrl}>خانه</Link>
-          </li>
-          <li className={router.pathname == "/about" ? "text-tcolor ml-8 font-bold" : "text-tcolor-200 ml-8"}>
-            <Link href={util.baseUrl + "about"}>درباره ما</Link>
+            <Link href={util.baseUrl}>Home</Link>
           </li>
 
-          { status !== "authenticated" ?
-            <li className={router.pathname == "/dashboard" ? "praymary-button-active cursor-pointer" : "praymary-button cursor-pointer"} onClick={handleClickOpen}>
-              پنل کاربری
-            </li>
-          :<></>}
-          {
-            session && <li className={router.pathname == "/dashboard" ? "praymary-button-active cursor-pointer" : "praymary-button cursor-pointer"} onClick={handleClickOpen}>
-            {session.user.firstName+" "+session.user.familyName}
+          <li className={router.pathname == "/about" ? "text-tcolor ml-8 font-bold w-[10%]" : "text-tcolor-200 mx-8 w-[10%]"}>
+            <Link href={util.baseUrl + "about"}>About us</Link>
           </li>
-          }
+
+
+          <div className="w-full flex justify-end mx-8">
+            <div className="w-fit">
+            { status !== "authenticated" ?
+              <li className={router.pathname == "/dashboard" ? "praymary-button-active cursor-pointer" : "praymary-button cursor-pointer"} onClick={handleClickOpen}>
+                Dashboard
+              </li>
+            :<></>}
+            {
+              session && <li className={router.pathname == "/dashboard" ? "praymary-button-active cursor-pointer" : "praymary-button cursor-pointer"} onClick={handleClickOpen}>
+              {session.user.firstName+" "+session.user.familyName}
+            </li>
+            }
+            </div>
+          </div>
         </ul>
 
 
