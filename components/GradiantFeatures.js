@@ -16,15 +16,19 @@ const GradiantFeatures = (props) => {
         <div className={classStr}>
 
             <dl>
-                <i className=" text-6xl text-white">
+                <i className=" text-6xl text-white w-full flex justify-center items-center text-center">
                     {props.children}
                 </i>
 
-                <dt className="text-white text-lg">
+                <div className="h-2"></div>
+
+                <dt className="text-white text-lg flex justify-center items-center text-center">
                     {props.title}
                 </dt>
 
-                <dd className="text-white  text-xs">
+                <div className="h-2"></div>
+
+                <dd className="text-white  text-xs flex justify-center items-center text-center">
                     {props.content}
                 </dd>
 

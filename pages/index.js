@@ -3,7 +3,7 @@ import PostsForHome from '../components/PostsForHome'
 import ProductsForHome from '../components/ProductsForHome'
 import Image from 'next/image'
 import GradiantFeatures from '../components/GradiantFeatures'
-import { FaHeadphonesAlt, FaMoneyBillAlt, FaHeart, FaClipboardCheck, FaRegArrowAltCircleLeft } from 'react-icons/fa';
+import { FaHeadphonesAlt, FaMoneyBillAlt, FaHeart, FaClipboardCheck, FaRegArrowAltCircleRight } from 'react-icons/fa';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Nav from '../components/Nav'
 import Layout from '../components/Layout'
@@ -64,27 +64,27 @@ export default function Home() {
           <div className='flex gap-4 py-8 '>
 
             <div className='bg-primary rounded-full w-36 h-36 shadow-lg shadow-primary text-center text-5xl text-white flex flex-col justify-center items-center shrink-0 m-auto hover:scale-105 transition-all duration-300 hover:cursor-pointer'>
-              <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
+              <FaRegArrowAltCircleRight></FaRegArrowAltCircleRight>
               <div className='h-2'></div>
               <span className=' text-xs'>
-                What makes us special
+                Why us ?
               </span>
             </div>
 
-            <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="تحویل آنی" content="دسترسی کامل به دوره بدون تاخیر">
+            <GradiantFeatures shadowColor="shadow-[#F55484]" startColor="from-[#FF8DB8]" endColor="to-[#F55484]" title="Instance Access" content="You get full access without waiting">
               <FaClipboardCheck></FaClipboardCheck>
             </GradiantFeatures>
 
-            <GradiantFeatures shadowColor="shadow-[#8E78FB]" startColor="from-[#B09EFE]" endColor="to-[#8E78FB]" title="بروزرسانی رایگان" content="دانلود رایگان آخرین بروزرسانی ها">
+            <GradiantFeatures shadowColor="shadow-[#8E78FB]" startColor="from-[#B09EFE]" endColor="to-[#8E78FB]" title="Free Update" content="You get free access to all of the updates">
               <FaHeart></FaHeart>
             </GradiantFeatures>
 
 
-            <GradiantFeatures shadowColor="shadow-[#FF9C2A]" startColor="from-[#FDD29E]" endColor="to-[#FF9C2A]" title="مناسب بازار کار" content="آماده سازی برای کسب درآمد">
+            <GradiantFeatures shadowColor="shadow-[#FF9C2A]" startColor="from-[#FDD29E]" endColor="to-[#FF9C2A]" title="For Professionals" content="Everything is design for professional use">
               <FaMoneyBillAlt></FaMoneyBillAlt>
             </GradiantFeatures>
 
-            <GradiantFeatures shadowColor="shadow-[#43C5E9]" startColor="from-[#8AE5FE]" endColor="to-[#43C5E9]" title="پشتیبانی 24 ساعته" content="تماس از طریق تیکت و واتساپ">
+            <GradiantFeatures shadowColor="shadow-[#43C5E9]" startColor="from-[#8AE5FE]" endColor="to-[#43C5E9]" title="24/7 Support" content="You could reach us anytime">
               <FaHeadphonesAlt></FaHeadphonesAlt>
             </GradiantFeatures>
 
