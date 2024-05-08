@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: { 
+        'franklin': ['Libre Franklin', 'sans-serif'],
+      },
       colors:{
         primary: "#00D5FF",
         secondary: "#25EFD2",

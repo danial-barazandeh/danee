@@ -41,7 +41,7 @@
     "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
-    "@types/node": "18.19.32",
+    "@types/node": "^18.19.32",
     "@types/react": "18.3.1",
     "autoprefixer": "^10.4.13",
     "eslint": "8.27.0",
@@ -49,7 +49,8 @@
     "postcss": "^8.4.18",
     "prisma": "^5.13.0",
     "tailwindcss": "^3.2.2",
-    "typescript": "5.4.5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "next.config.js",
