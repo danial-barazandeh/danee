@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Fab } from '@mui/material';
 import Switch from '@mui/material/Switch';
 import axios from 'axios';
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -70,7 +71,7 @@ export default function Products() {
                                 <td className=' text-[10px] lg:text-[12px] xl:text-[15px]'>{post.content ? post.content.substring(0, 30) + "..." : "ثبت نشده"}</td>
                                 <td>
                                     <div className='w-16 h-10 md:w-24 md:h-16 lg:w-32 lg:h-24 rounded-lg overflow-hidden'>
-                                        <Image src={post.image.url.length > 1 ? post.image.url : `${util.baseUrl}images/not-found.jfif`} className="w-full h-full"></Image>
+                                        <Image alt={post.image.url} height={1080/2} width={1920/2} src={post.image.url.length > 1 ? post.image.url : `${util.baseUrl}images/not-found.jfif`} className="w-full h-full"></Image>
                                     </div>
                                 </td>
                                 <td>

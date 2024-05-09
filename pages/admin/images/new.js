@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useDropzone } from 'react-dropzone'
 import { util } from '../../../components/util'
 import * as FormData from 'form-data'
+import Image from 'next/image';
 
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())

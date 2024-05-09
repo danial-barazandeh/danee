@@ -34,7 +34,7 @@ const PostsForHome = () => {
 
 
                 <div>
-                    <Image width={1920/2} height={1080/2}  src={data.author.image.url} className="rounded-3xl cursor-pointer h-24 w-24 hover:rounded-md transition-all duration-300 ease-linear " />
+                    <Image alt={data.author.image.url} width={1920/2} height={1080/2}  src={data.author.image.url} className="rounded-3xl cursor-pointer h-24 w-24 hover:rounded-md transition-all duration-300 ease-linear " />
                 </div>
                 <div className='flex flex-col'>
                     <div className='text-tcolor text-lg'>
@@ -51,7 +51,7 @@ const PostsForHome = () => {
 
             {/* POST DETAIL */}
             <div className='flex flex-col items-center align-middle gap-4'>
-                <img src={data.image.url} className="rounded-xl" />
+                <Image alt={data.image.url} width={1920/2} height={1080/2} src={data.image.url} className="rounded-xl" />
 
                 <h1 className='text-tcolor text-3xl font-bold mt-8'> {data.title} </h1>
 

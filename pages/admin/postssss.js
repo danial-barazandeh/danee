@@ -3,6 +3,7 @@ import AdminMenu from '../../components/admin/AdminMenu'
 import useSWR from 'swr'
 import { useState } from "react";
 import { FiEdit } from "react-icons/fi";
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -58,7 +59,7 @@ export default function Posts() {
                                 <td>{post.content ? post.content.substring(0, 30) + "..." : "ثبت نشده"}</td>
                                 <td>
                                     <div className=' w-20 h-15 rounded-lg overflow-hidden'>
-                                        <Image src={post.image.length > 0 ? post.image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg'}></Image>
+                                        <Image width={1920/2} height={1080/2} alt={post.image} src={post.image.length > 0 ? post.image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg'}></Image>
                                     </div>
                                 </td>
                                 <td>

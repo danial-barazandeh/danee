@@ -5,6 +5,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import Link from 'next/link'
 import { util } from "../../../components/util";
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -59,7 +60,7 @@ export default function Image() {
                 <div className='flex gap-4 justify-start items-center'>
                     <label className='w-[15%] font-bold'>تصویر</label>
                     <div className=' w-[30%] h-[30%] border-2 border-slate-400 rounded-md overflow-hidden'>
-                        <Image src={data.url}></img>
+                        <Image width={1920/2} height={1080/2} alt={data.url} src={data.url}></Image>
                     </div>
                 </div>
 

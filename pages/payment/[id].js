@@ -16,6 +16,7 @@ import { util } from '../../components/util';
 import styles from '../../styles/payment.module.css'
 import { Button } from '@mui/material';
 import { off } from 'process';
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -75,7 +76,7 @@ const PostsForHome = () => {
       </p>
 
       <div className={styles.productHolder}>
-        <Image src={data.image.url} />
+        <Image alt={data.image.url} width={1920/2} height={1080/2} src={data.image.url} />
         <div>
           <p className="text-md text-tcolor pr- mb-4">
             <NumberFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />

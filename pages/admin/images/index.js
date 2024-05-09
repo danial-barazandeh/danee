@@ -7,6 +7,7 @@ import { util } from "../../../components/util";
 import axios from 'axios';
 import Link from 'next/link'
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -75,7 +76,7 @@ export default function Images() {
                                             text={image.url}
                                             className="hover:cursor-copy h-full w-full"
                                             onCopy={() => alert("لینک کپی شد")}>
-                                            <Image className='h-full w-full' src={image.url.length > 0 ? image.url : util.baseUrl + "images/not-found.jfif"}></Image>
+                                            <Image width={1920/2} height={1080/2} alt={image.url} className='h-full w-full' src={image.url.length > 0 ? image.url : util.baseUrl + "images/not-found.jfif"}></Image>
                                         </CopyToClipboard>
                                     </div>
                                 </td>
