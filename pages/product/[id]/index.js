@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Player from '../../../components/Player'
 import { FaRegClock, FaStar, FaBook, FaRegStickyNote } from "react-icons/fa";
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from 'react-number-format';
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import Nav from '../../../components/Nav'
@@ -69,7 +69,7 @@ const PostsForHome = () => {
           <div className='flex flex-col justify-center items-center w-full my-4'>
 
             <span className="text-md text-tcolor pr- mb-4">
-              <NumberFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />
+              <NumericFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />
               &nbsp;
               هزار تومن
             </span>

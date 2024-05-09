@@ -10,8 +10,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Lottie from "lottie-react";
-import loading from "../public/lottie/loading.json";
+// import loading from "../public/lottie/loading.json";
 import { signIn, useSession } from "next-auth/react";
 import axios from 'axios';
 import { useRef } from "react";
@@ -248,7 +247,9 @@ const Nav = () => {
 
               {
                 isLoading ?
-                  <div className=" w-24"> <Lottie animationData={loading} loop={true} /> </div> :
+                  <div className=" w-24"> 
+                  {/* <Lottie animationData={loading} loop={true} /> */}
+                  </div> :
                   !showOtpInput ? <Button onClick={sendSms} variant="contained" className=" bg-primary hover:bg-secondary w-24 rounded-lg">
                     <p> ثبت </p>
                   </Button>

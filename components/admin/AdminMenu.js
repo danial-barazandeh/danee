@@ -1,9 +1,10 @@
-
-// import { FiHome, FiUsers, FiImage, FiDollarSign, FiFileText, FiShoppingBag, FiVideo } from "react-icons/Fi";
-// import { BiCategory, } from "react-icons/Bi";
 import { useRouter } from 'next/router'
 import Link from "next/link";
 import { util } from '../util'
+
+import {FiHome, FiShoppingBag, FiVideo, FiFileText, FiUsers, FiImage} from "react-icons/Fi";
+import {FaDollarSign} from "react-icons/fa"
+import {BiCategory} from "react-icons/Bi";
 
 const AdminMenu = ({ children }) => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const AdminMenu = ({ children }) => {
           <div className={router.pathname == "/admin" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin"}>
               <a>
-                {/* <FiHome className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiHome> */}
+                <FiHome className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
               </a>
             </Link>
           </div>
@@ -27,7 +28,7 @@ const AdminMenu = ({ children }) => {
           <div className={router.pathname == "/admin/products" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin/products"}>
               <a>
-                {/* <FiShoppingBag className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiShoppingBag> */}
+                <FiShoppingBag className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
               </a>
             </Link>
           </div>
@@ -35,7 +36,7 @@ const AdminMenu = ({ children }) => {
           {router.pathname.includes('/admin/products') ? <div className={router.pathname == "/admin/products/sections" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin/products/sections"}>
               <a>
-                {/* <BiCategory className=" text-lg text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer mt-4"></BiCategory> */}
+                <BiCategory className=" text-lg text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer mt-4"/>
               </a>
             </Link>
           </div> : <></>}
@@ -43,7 +44,7 @@ const AdminMenu = ({ children }) => {
           {router.pathname.includes('/admin/products') ? <div className={router.pathname == "/admin/products/lectures" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin/products/lectures"}>
               <a>
-                {/* <FiVideo className=" text-lg text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer mt-4"></FiVideo> */}
+                <FiVideo className=" text-lg text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer mt-4"/>
               </a>
             </Link>
           </div> : <></>}
@@ -54,7 +55,7 @@ const AdminMenu = ({ children }) => {
           <div className={router.pathname == "/admin/posts" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin/posts"}>
               <a>
-                {/* <FiFileText className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiFileText> */}
+                <FiFileText className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
               </a>
             </Link>
           </div>
@@ -62,7 +63,7 @@ const AdminMenu = ({ children }) => {
 
         <div>
           <div className={router.pathname == "/333" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
-            {/* <FiUsers className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiUsers> */}
+            <FiUsers className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
           </div>
         </div>
 
@@ -70,7 +71,7 @@ const AdminMenu = ({ children }) => {
           <div className={router.pathname == "/admin/images" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin/images"}>
               <a>
-                {/* <FiImage className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiImage> */}
+                <FiImage className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
               </a>
             </Link>
           </div>
@@ -78,7 +79,7 @@ const AdminMenu = ({ children }) => {
 
         <div>
           <div className={router.pathname == "/444" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
-            {/* <FiDollarSign className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"></FiDollarSign> */}
+            <FaDollarSign className=" text-2xl text-white hover:scale-125 transition-all duration-300 ease-linear hover:cursor-pointer"/>
           </div>
         </div>
 

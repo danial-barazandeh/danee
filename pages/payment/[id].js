@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import Player from '../../components/Player'
 import { FaRegClock, FaStar, FaBook, FaRegStickyNote } from "react-icons/fa";
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from 'react-number-format';
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import Nav from '../../components/Nav'
@@ -79,7 +79,7 @@ const PostsForHome = () => {
         <Image alt={data.image.url} width={1920/2} height={1080/2} src={data.image.url} />
         <div>
           <p className="text-md text-tcolor pr- mb-4">
-            <NumberFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />
+            <NumericFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />
             &nbsp;
             هزار تومن
           </p>
