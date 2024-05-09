@@ -1,7 +1,7 @@
 import AdminMenu from '../../../components/admin/AdminMenu'
 import useSWR from 'swr'
 import { useState } from "react";
-import { FiEdit, FiTrash2, FiPlus } from "react-icons/fi";
+import { FiEdit, FiPlus } from "react-icons/fi";
 import { util } from '../../../components/util'
 import Link from 'next/link'
 import { Fab } from '@mui/material';
@@ -94,7 +94,7 @@ export default function Products() {
 
             <div className='flex mt-8 justify-center items-center'>
                 {Array.from(Array(parseInt(data.total_page)), (e, i) => {
-                    return <button onClick={() => setPageIndex(i)} className={data.page == i ? "px-4 py-2 inset-2 border border-slate-700" : "px-4 py-2 inset-2 border"}>
+                    return <button key={i} onClick={() => setPageIndex(i)} className={data.page == i ? "px-4 py-2 inset-2 border border-slate-700" : "px-4 py-2 inset-2 border"}>
                         {i + 1}
                     </button>
                 })}

@@ -105,7 +105,7 @@ export default function Images() {
 
             <div className='flex mt-8 justify-center items-center'>
                 {Array.from(Array(parseInt(data.total_page)), (e, i) => {
-                    return <button onClick={() => setPageIndex(i)} className={data.page == i ? "px-4 py-2 inset-2 border border-slate-700" : "px-4 py-2 inset-2 border"}>
+                    return <button key={i} onClick={() => setPageIndex(i)} className={data.page == i ? "px-4 py-2 inset-2 border border-slate-700" : "px-4 py-2 inset-2 border"}>
                         {i + 1}
                     </button>
                 })}
