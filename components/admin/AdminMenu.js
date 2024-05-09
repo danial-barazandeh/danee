@@ -11,9 +11,7 @@ const AdminMenu = ({ children }) => {
   return (
     <div className="min-h-screen flex">
       <div className="bg-slate-900 md:w-min flex flex-col gap-4 items-center ">
-
         <br></br>
-
         <div>
           <div className={router.pathname == "/admin" ? "border-r-2 border-white p-2" : "border-r-2 p-2 border-transparent"}>
             <Link href={util.baseUrl + "admin"}>
