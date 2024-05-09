@@ -10,9 +10,12 @@ import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
+export default function NewImage(){
+    return (<div></div>);
+}
 
-
-export default function NewImage() {
+//export default
+function NewImageEEEEEEEE() {
 
         const [title, setTitle] = useState('');
         const [description, setDescription] = useState('');

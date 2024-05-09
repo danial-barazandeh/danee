@@ -26,20 +26,28 @@ a {
 
 
 @keyframes example {
-  0%   {filter: drop-shadow(16px 16px 100px #1EEADA) blur(0px);}
-  100% {filter: drop-shadow(16px 16px 100px #1EEADA) blur(8px);}
+  0% {
+    filter: drop-shadow(16px 16px 100px #EFAC5B) blur(0px);
+  }
+  100% {
+    filter: drop-shadow(16px 16px 100px #EFAC5B) blur(8px);
+    animation-timing-function: cubic-bezier(0.1, 0.1, 0.9, 0.9);
+  }
 }
 
 
 .img-child-blur > .img{
   /* @apply hover:blur-sm duration-300 transition-all;  */
   filter: blur(0px);
-  transition: 0.5s;
+  transition: 0.25s;
+  animation-timing-function: ease-in-out;
 }
 .img-child-blur:hover > .img{
   animation-name: example;
-  animation-duration: 1s;
-  filter: drop-shadow(16px 16px 100px #1EEADA) blur(8px);
+  animation-duration: 0.25s;
+  filter: drop-shadow(16px 16px 100px #EFAC5B) blur(8px);
+  animation-timing-function: ease-in-out;
+
 }
 
 .fontmontserrat{

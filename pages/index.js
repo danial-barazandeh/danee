@@ -8,21 +8,25 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import Nav from '../components/Nav'
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
-// import 'tw-elements';
-
 
 export default function Home() {
+
+
+
   return (
       <div>
 
-        <div className='grid col-span-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 justify-center items-center '>
+        <div className='grid col-span-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 justify-center items-center'>
           <div className='mx-8 relative w-fit 2xl:w-[65%] flex justify-center items-center group img-child-blur'>
-            <div className='static w-[100%] h-[50%] group img '>
+            <div className='static w-[100%] h-[50%] group img   pl-16'>
               {/* <Lottie animationData={freelancer} loop={true} /> */}
+
+              <Image width={800} height={842} alt='Sci' src={"http://localhost:3000/images/sci.png"}></Image>
+             
               {/* hover:blur-lg hover:saturate-50 transition-all duration-300 ease-linear */}
             </div>
-            <div className=' absolute'>
-              <p className=' scale-0 group-hover:scale-100 text-white drop-shadow-2xl font-extrabold text-3xl transition-all duration-300 child-parent-blur'> Lets start learning together </p>
+            <div className='absolute   pl-16'>
+              <p className='scale-0 text-center group-hover:scale-100 text-white font-extrabold text-3xl transition-all duration-300 child-parent-blur  drop-shadow-[0_1.2px_1.2px_rgba(239,172,91,0.8)]'> Lets start learning together </p>
             </div>
           </div>
 
@@ -107,4 +111,5 @@ Home.getLayout = function getLayout(page) {
     </>
   )
 }
+
 
