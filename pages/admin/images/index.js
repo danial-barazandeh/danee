@@ -75,7 +75,7 @@ export default function Images() {
                                             text={image.url}
                                             className="hover:cursor-copy h-full w-full"
                                             onCopy={() => alert("لینک کپی شد")}>
-                                            <img className='h-full w-full' src={image.url.length > 0 ? image.url : util.baseUrl + "images/not-found.jfif"}></img>
+                                            <Image className='h-full w-full' src={image.url.length > 0 ? image.url : util.baseUrl + "images/not-found.jfif"}></Image>
                                         </CopyToClipboard>
                                     </div>
                                 </td>

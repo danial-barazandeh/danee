@@ -10,6 +10,7 @@ import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
 import parse from 'html-react-parser';
 import Chip from '@mui/material/Chip';
+import Image from 'next/image'
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -33,7 +34,7 @@ const PostsForHome = () => {
 
 
                 <div>
-                    <img src={data.author.image.url} className="rounded-3xl cursor-pointer h-24 w-24 hover:rounded-md transition-all duration-300 ease-linear " />
+                    <Image width={1920/2} height={1080/2}  src={data.author.image.url} className="rounded-3xl cursor-pointer h-24 w-24 hover:rounded-md transition-all duration-300 ease-linear " />
                 </div>
                 <div className='flex flex-col'>
                     <div className='text-tcolor text-lg'>

@@ -58,7 +58,7 @@ export default function Posts() {
                                 <td>{post.content ? post.content.substring(0, 30) + "..." : "ثبت نشده"}</td>
                                 <td>
                                     <div className=' w-20 h-15 rounded-lg overflow-hidden'>
-                                        <img src={post.image.length > 0 ? post.image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg'}></img>
+                                        <Image src={post.image.length > 0 ? post.image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg'}></Image>
                                     </div>
                                 </td>
                                 <td>

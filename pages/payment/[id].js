@@ -75,7 +75,7 @@ const PostsForHome = () => {
       </p>
 
       <div className={styles.productHolder}>
-        <img src={data.image.url} />
+        <Image src={data.image.url} />
         <div>
           <p className="text-md text-tcolor pr- mb-4">
             <NumberFormat value={data.salePrice && data.salePrice.length > 0 ? data.salePrice : data.price} displayType={'text'} format="###,###" />

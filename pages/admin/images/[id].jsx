@@ -59,7 +59,7 @@ export default function Image() {
                 <div className='flex gap-4 justify-start items-center'>
                     <label className='w-[15%] font-bold'>تصویر</label>
                     <div className=' w-[30%] h-[30%] border-2 border-slate-400 rounded-md overflow-hidden'>
-                        <img src={data.url}></img>
+                        <Image src={data.url}></img>
                     </div>
                 </div>
 

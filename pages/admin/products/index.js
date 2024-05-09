@@ -70,7 +70,7 @@ export default function Products() {
                                 <td className=' text-[10px] lg:text-[12px] xl:text-[15px]'>{post.content ? post.content.substring(0, 30) + "..." : "ثبت نشده"}</td>
                                 <td>
                                     <div className='w-16 h-10 md:w-24 md:h-16 lg:w-32 lg:h-24 rounded-lg overflow-hidden'>
-                                        <img src={post.image.url.length > 1 ? post.image.url : `${util.baseUrl}images/not-found.jfif`} className="w-full h-full"></img>
+                                        <Image src={post.image.url.length > 1 ? post.image.url : `${util.baseUrl}images/not-found.jfif`} className="w-full h-full"></Image>
                                     </div>
                                 </td>
                                 <td>
