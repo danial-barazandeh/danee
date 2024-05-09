@@ -87,7 +87,7 @@ export default function NewImage() {
 
                 <br></br>
 
-                <Image src={createObjectURL} width={250} height={150} className="rounded-lg overflow-hidden" />
+                <Image alt={createObjectURL} src={createObjectURL} width={250} height={150} className="rounded-lg overflow-hidden" />
 
 
                 <div className='flex gap-4 justify-start items-center'>
