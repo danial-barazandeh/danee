@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Player from '../../../components/Player'
-import { FaRegClock, FaStar, FaBook, FaRegStickyNote } from "react-icons/fa";
+import { FaRegClock, FaStar, FaBook, FaNoteSticky } from "react-icons/fa6";
 import { NumericFormat } from 'react-number-format';
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
@@ -39,7 +39,7 @@ const PostsForHome = () => {
 
           <div className=' flex justify-center items-cesnter'>
             <i className="text-2xl text-primary">
-              <FaRegClock></FaRegClock>
+              <FaNoteSticky></FaNoteSticky>
             </i>
             <li className="text-md text-tcolor pr-3"> {"مدت دوره : " + data.time} </li>
           </div>
@@ -120,7 +120,7 @@ const PostsForHome = () => {
                       <>
                         <Disclosure.Button className="bg-slate-200 flex my-4 w-full justify-between rounded-lg px-4 py-2 text-left text-sm font-medium ">
                           <div className='flex items-center justify-start my-4'>
-                            <FaRegStickyNote></FaRegStickyNote>
+                            <FaNoteSticky></FaNoteSticky>
                             <span className='text-md mx-4 text-tcolor font-bold'>{lecture.title}</span>
                           </div>
                           <ChevronUpIcon

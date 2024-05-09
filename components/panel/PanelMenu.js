@@ -1,6 +1,6 @@
 
-import { FiHome, FiUsers, FiImage, FiDollarSign, FiFileText, FiShoppingBag, FiVideo, FiUser } from "react-icons/Fi";
-import { BiCategory, } from "react-icons/Bi";
+import { FiHome, FiUsers, FiImage, FiDollarSign, FiFileText, FiShoppingBag, FiVideo, FiUser } from "react-icons/fi";
+import { BiCategory, } from "react-icons/bi";
 import { SessionProvider } from 'next-auth/react';
 import { useRouter } from 'next/router'
 import Link from "next/link";

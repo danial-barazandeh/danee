@@ -2,9 +2,9 @@ import { useRouter } from 'next/router'
 import Link from "next/link";
 import { util } from '../util'
 
-import {FiHome, FiShoppingBag, FiVideo, FiFileText, FiUsers, FiImage} from "react-icons/Fi";
-import {FaDollarSign} from "react-icons/fa"
-import {BiCategory} from "react-icons/Bi";
+import {FiHome, FiShoppingBag, FiVideo, FiFileText, FiUsers, FiImage} from "react-icons/fi";
+import {FaDollarSign} from "react-icons/fa6"
+import {BiCategory} from "react-icons/bi";
 
 const AdminMenu = ({ children }) => {
   const router = useRouter();
